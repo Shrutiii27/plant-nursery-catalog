@@ -1,0 +1,32 @@
+name: CI Pipeline
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Check website files exist
+        run: |
+          test -f index.html
+          test -f css/style.css
+          test -f js/script.js
+          echo "All website files found"
+
+      - name: Build Docker image
+        run: docker build -t plant-nursery-catalog .
+
+      - name: Run container and test website
+        run: |
+          docker run -d -p 8080:80 --name plant-site plant-nursery-catalog
+          sleep 5
+          curl -f http://localhost:8080
+          echo "Website is running successfully"

@@ -107,3 +107,54 @@ li {
     padding: 0;
     margin: 0;
 }
+
+.reminder-box {
+    background-color: white;
+    max-width: 400px;
+    margin: 20px auto 40px;
+    padding: 25px;
+    border-radius: 10px;
+    border-top: 5px solid #66bb6a;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+}
+
+.reminder-box label {
+    display: block;
+    margin-top: 12px;
+    font-weight: bold;
+    color: #2e7d32;
+}
+
+.reminder-box select,
+.reminder-box input {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.reminder-box button {
+    width: 100%;
+    margin-top: 18px;
+    padding: 10px;
+    background-color: #2e7d32;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.reminder-box button:hover {
+    background-color: #1b5e20;
+}
+
+#reminderResult {
+    margin-top: 15px;
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+    color: #1b5e20;
+}

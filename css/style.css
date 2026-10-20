@@ -41,3 +41,41 @@ li {
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
+
+.plant-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.plant-card {
+    background-color: white;
+    width: 240px;
+    padding: 20px;
+    border-radius: 10px;
+    border-top: 5px solid #66bb6a;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+}
+
+.plant-card h3 {
+    color: #2e7d32;
+    margin-top: 0;
+}
+
+.plant-card p {
+    text-align: left;
+    font-size: 15px;
+    padding: 4px 0;
+}
+
+.plant-card .type {
+    color: #777;
+    font-size: 13px;
+}
+
+.plant-card .price {
+    font-weight: bold;
+    color: #2e7d32;
+}
